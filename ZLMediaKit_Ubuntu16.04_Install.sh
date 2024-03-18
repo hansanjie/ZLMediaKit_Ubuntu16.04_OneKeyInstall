@@ -39,8 +39,21 @@ make -j$(nproc)
 sudo make install
 
 # 构建完成后，可找到MediaServer执行文件在以下目录
-# 替换Release为Debug可以获取debug版本
+# 替换Release为Debug可以获取Release版本
+sudo mv $HOME/ZLMediaKit/release/linux/Debug $HOME/ZLMediaKit/release/linux/Release
+
 cd $HOME/ZLMediaKit/release/linux/Release
+
+# 替换Release为Debug可以获取debug版本
+# sudo mv $HOME/ZLMediaKit/release/linux/Debug $HOME/ZLMediaKit/release/linux/Debug
+# 构建完成后，可找到MediaServer执行文件在以下目录
+#cd $HOME/ZLMediaKit/release/linux/Release
+
+#sudo chmod -R 755 $HOME/ZLMediaKit/release/linux/Release
+#创建log文件夹
+#sudo mkdir -p $HOME/ZLMediaKit/release/linux/Release/log
+
+#sudo chmod -R 755 $HOME/ZLMediaKit/release/linux/Release/log
 # 以守护进程模式启动
 ./MediaServer -d &
 
