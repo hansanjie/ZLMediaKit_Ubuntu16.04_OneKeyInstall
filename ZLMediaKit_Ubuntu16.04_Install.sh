@@ -3,11 +3,11 @@
 
 #备份当前的 sources.list 文件（非常重要，以防万一）
 
-#sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
+sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
 
 #选择一个国内镜像源，然后使用 sed 命令来替换 /etc/apt/sources.list 中的内容。以下是使用中科大（USTC）作为国内源的一个例子：
 
-#sudo sed -i 's/http:\/\/archive.ubuntu.com\/ubuntu\//https:\/\/mirrors.ustc.edu.cn\/ubuntu\//g' /etc/apt/sources.list
+sudo sed -i 's/http:\/\/archive.ubuntu.com\/ubuntu\//https:\/\/mirrors.ustc.edu.cn\/ubuntu\//g' /etc/apt/sources.list
 
 sudo apt-get update
 #（可选）升级所有已安装的软件包
